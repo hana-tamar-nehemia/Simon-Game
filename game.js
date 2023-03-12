@@ -60,14 +60,22 @@ function nextSequence() {
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
 
-  //show to user
-  $("#" + randomChosenColour)
+  //show the user the order with the new color
+  gamePattern.forEach((color, index) => {
+    setTimeout(() => {
+      duplicate(color);
+    }, (index + 1) * 600);
+  });
+}
+
+function duplicate(color) {
+  $("#" + color)
     .fadeOut(100)
     .fadeIn(100)
     .fadeOut(100)
     .fadeIn(100);
-  animatePress(randomChosenColour);
-  playSound(randomChosenColour);
+  animatePress(color);
+  playSound(color);
 }
 
 // play uniqe sound acordding to the color
