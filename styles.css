@@ -10,6 +10,11 @@ body {
   color: #FEF2BF;
 }
 
+#copyrght {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  color: #fef2bf;
+}
 .container {
   display: block;
   width: 50%;
